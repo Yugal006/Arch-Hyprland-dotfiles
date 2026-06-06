@@ -19,7 +19,35 @@ Every wallpaper automatically generates a complete color palette and synchronize
 
 ---
 
-![Desktop Preview](assets/IDLE.png)
+## 📸 Screenshots
+
+### Idle Desktop
+
+![Idle](assets/IDLE.png)
+
+### GTK + VSCode
+
+![GTK VSCode](assets/GTK+VSCode.png)
+
+### Neovim + Tmux
+
+![Neovim](assets/NVim+TMUX.png)
+
+### Yazi
+
+![Yazi](assets/Yazi.png)
+
+---
+
+## Preview
+
+![Preview](assets/preview.gif)
+
+## 🎥 Full Showcase
+
+See the complete setup in action:
+
+[Showcase Video](assets/ShowCase.mp4)
 
 ---
 
@@ -95,38 +123,6 @@ Neovim configuration includes:
 - Yazi
 - Dynamic Matugen colors
 - Preview support
-
----
-
-## 📸 Screenshots
-
-### Idle Desktop
-
-![Idle](assets/IDLE.png)
-
-### GTK + VSCode
-
-![GTK VSCode](assets/GTK+VSCode.png)
-
-### Neovim + Tmux
-
-![Neovim](assets/NVim+TMUX.png)
-
-### Yazi
-
-![Yazi](assets/Yazi.png)
-
----
-
-## Preview
-
-![Preview](assets/preview.gif)
-
-## 🎥 Full Showcase
-
-See the complete setup in action:
-
-[Showcase Video](assets/ShowCase.mp4)
 
 ---
 
