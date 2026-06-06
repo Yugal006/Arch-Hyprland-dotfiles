@@ -1,0 +1,296 @@
+@import url("file:///home/yloryth/.config/waybar/colors.css");
+
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+
+    font-size: 0.95rem;
+    font-family: "Inter", "JetBrainsMono Nerd Font";
+
+    transition: all 0.2s ease-in-out;
+}
+
+/* ========================= */
+/* BAR */
+/* ========================= */
+
+window#waybar {
+    background: transparent;
+    color: @on_surface;
+    padding: 6px 8px;
+}
+
+/* ========================= */
+/* UNIFIED MODULE STYLE */
+/* ========================= */
+
+#clock,
+#window,
+#hyprland-window,
+#battery,
+#pulseaudio,
+#network,
+#workspaces {
+    padding: 4px 10px;
+    margin: 4px 5px;
+
+    border-radius: 999px;
+    background-color: @primary;
+    color: #121212;
+
+    font-weight: 600;
+    min-height: 0px;
+}
+.modules-left {
+    margin-right: 60px;
+}
+
+.modules-center {
+    margin: 0 80px;
+}
+
+.modules-right {
+    margin-left: 60px;
+}
+/* ========================= */
+/* GLOBAL MODULE HOVER (ALL MODULES) */
+/* ========================= */
+
+#clock:hover,
+#window:hover,
+#hyprland-window:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover {
+    background: @primary_container;
+    padding: 6px 14px;
+}
+
+/* ========================= */
+/* WORKSPACES */
+/* ========================= */
+
+#workspaces {
+    background-color: @surface_container;
+    padding: 4px 6px;
+    border-radius: 20px;
+    margin: 4px 0px;
+}
+
+/* workspace buttons */
+#workspaces button {
+    padding: 4px 12px;
+    margin: 4px 3px;
+
+    background: @primary;
+    color: #121212;
+
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    transition:
+        background-color 0.25s ease,
+        padding 0.2s ease,
+        border-radius 0.2s ease,
+        border 0.2s ease;
+}
+
+/* hover */
+#workspaces button:hover {
+    background: @primary_container;
+    padding: 4px 16px;
+    border-radius: 18px;
+}
+
+/* active */
+#workspaces button.active {
+    background: @secondary;
+    color: #121212;
+
+    padding: 4px 18px;
+    border-radius: 999px;
+
+    border: 2px solid @on_surface;
+    font-weight: 700;
+}
+
+/* active hover */
+#workspaces button.active:hover {
+    background: @secondary_container;
+    padding: 4px 16px;
+}
+
+/* urgent */
+#workspaces button.urgent {
+    background: @error;
+    color: black;
+    border: 2px solid white;
+}
+
+#workspaces button label {
+    font-size: 1.3rem;
+}
+
+/* ========================= */
+/* SPECIFIC TEXT SIZES */
+/* ========================= */
+
+#clock {
+    min-width: 55px;
+    font-size: 0.9rem;
+    font-weight: 900;
+    margin-left: 12px;
+}
+
+#battery{
+    margin-right: 12px;
+}
+
+#window,
+#hyprland-window {
+    min-width: 100px;
+    font-weight: 600;
+}
+
+#window label {
+    font-size: 0.85rem;
+}
+
+#battery,
+#pulseaudio,
+#network {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ========================= */
+/* MUSIC BAR (MPRIS + CAVA) */
+/* ========================= */
+
+/* shared container look */
+#custom-mpris,
+#custom-cava {
+    margin: 4px 0;
+    padding: 4px 10px;
+
+    background-color: @primary;
+    color: #121212;
+
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    transition: background-color 0.25s ease, padding 0.2s ease;
+}
+
+/* merge both into ONE pill */
+#custom-mpris {
+    border-radius: 999px 0 0 999px;
+    padding-left: 14px;
+}
+
+#custom-cava {
+    border-radius: 0 999px 999px 0;
+    padding-right: 14px;
+}
+
+/* spacing fix (no gap between them) */
+#custom-mpris+#custom-cava {
+    margin-left: -4px;
+}
+
+/* ========================= */
+/* HOVER EFFECT */
+/* ========================= */
+
+#custom-mpris:hover,
+#custom-cava:hover {
+    background-color: @primary_container;
+}
+
+/* ========================= */
+/* PLAYING / ACTIVE STATE */
+/* ========================= */
+
+/* Waybar DOES NOT auto add .playing → we fake it visually */
+#custom-mpris {
+    background-color: @secondary;
+}
+
+/* ========================= */
+/* PAUSED STATE (dim look) */
+/* ========================= */
+
+#custom-mpris.paused {
+    background-color: @surface_container;
+    color: @on_surface_variant;
+}
+
+/* ========================= */
+/* CAVA STATES */
+/* ========================= */
+
+/* when no sound */
+#custom-cava.silent {
+    background-color: @surface_container_low;
+    color: @on_surface_variant;
+}
+
+/* when updating (animation frame) */
+#custom-cava.updated {
+    background-color: @secondary;
+    color: #121212;
+}
+
+/* ========================= */
+/* TEXT TUNING */
+/* ========================= */
+
+#custom-mpris label {
+    padding: 0 6px;
+}
+
+/* ========================= */
+/* SUBTLE GLOW EFFECT (GTK SAFE) */
+/* ========================= */
+
+#custom-mpris,
+#custom-cava {
+    /* border: 1px solid @outline_variant; */
+}
+
+/* hover glow illusion */
+#custom-mpris:hover,
+#custom-cava:hover {
+    border: 1px solid @primary;
+}
+
+#custom-power-battery {
+    padding: 4px 10px;
+    margin: 4px 5px;
+
+    border-radius: 999px;
+
+    background-color: @primary;
+    color: #121212;
+
+    font-weight: 600;
+    font-size: 1.05rem;
+
+    transition: all 0.25s ease-in-out;
+}
+
+#custom-power-battery:hover {
+    background-color: @primary_container;
+    padding: 6px 14px;
+}
+
+

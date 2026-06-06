@@ -1,0 +1,226 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+# =========================================================
+# STARSHIP — CYBER HUD MINIMAL
+# =========================================================
+
+add_newline = true
+palette = "cyberdream"
+
+format = """
+[╭─](fg:color_aqua)\
+$os\
+$username\
+[](fg:color_aqua)\
+$directory\
+[](fg:color_blue)\
+$git_branch\
+$git_status\
+$git_commit\
+[](fg:color_yellow)\
+$nodejs\
+$rust\
+$golang\
+$python\
+$java\
+$package\
+[](fg:color_pink)\
+$kubernetes\
+$hostname\
+$status\
+$line_break\
+[╰─](fg:color_aqua)$character
+"""
+
+right_format = """
+$time\
+$battery\
+$cmd_duration
+"""
+
+# =========================================================
+# PALETTE
+# =========================================================
+
+[palettes.cyberdream]
+text               = "#c7cfff"
+overlay1           = "#242937"
+
+color_fg0          = "#c7cfff"
+
+color_blue         = "#5ea1ff"
+color_aqua         = "#5ef1ff"
+color_green        = "#5eff6c"
+color_orange       = "#ffb65e"
+color_red          = "#ff6e5e"
+color_yellow       = "#f1ff5e"
+color_pink         = "#ff5ea0"
+
+# =========================================================
+# CORE
+# =========================================================
+
+[os]
+disabled = false
+style = "fg:color_pink"
+format = "[$symbol ]($style)"
+
+[os.symbols]
+Arch = ""
+Ubuntu = ""
+Debian = ""
+Linux = ""
+Macos = ""
+Windows = ""
+
+[username]
+show_always = true
+style_user = "fg:text bold"
+style_root = "fg:color_red bold"
+format = "[$user ]($style)"
+
+# =========================================================
+# DIRECTORY
+# =========================================================
+
+[directory]
+style = "fg:color_blue bold"
+format = " 📂 [$path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+".config" = " "
+
+# =========================================================
+# GIT
+# =========================================================
+
+[git_branch]
+symbol = ""
+style = "fg:color_yellow"
+format = " 🌿 [$symbol $branch ]($style)"
+
+[git_status]
+style = "fg:color_orange"
+format = "[$all_status$ahead_behind ]($style)"
+
+[git_commit]
+only_detached = false
+tag_disabled = false
+tag_symbol = "  "
+style = "fg:color_pink"
+format = "🔖 [$hash$tag ]($style)"
+
+# =========================================================
+# LANGUAGES / DEV
+# =========================================================
+
+[nodejs]
+symbol = " "
+style = "fg:color_green"
+format = "[$symbol ($version) ]($style)"
+
+[rust]
+symbol = " 🦀"
+style = "fg:color_orange"
+format = "[$symbol ]($style)"
+
+[golang]
+symbol = " 🐹"
+style = "fg:color_aqua"
+format = "[$symbol ]($style)"
+
+[python]
+symbol = " 🐍"
+style = "fg:color_yellow"
+format = "[$symbol $virtualenv ]($style)"
+
+[java]
+symbol = " ☕"
+style = "fg:color_red"
+format = "[$symbol ]($style)"
+
+[package]
+symbol = "📦"
+style = "fg:color_green"
+format = "[$symbol $version ]($style)"
+
+# =========================================================
+# KUBERNETES
+# =========================================================
+
+[kubernetes]
+disabled = false
+symbol = "☸"
+style = "fg:color_blue"
+format = "[$symbol $context:$namespace ]($style)"
+detect_env_vars = ["KUBECONFIG"]
+
+# =========================================================
+# SSH / HOST
+# =========================================================
+
+[hostname]
+ssh_only = true
+style = "fg:color_orange"
+format = "[🌐 $hostname ]($style)"
+
+# =========================================================
+# STATUS
+# =========================================================
+
+[status]
+disabled = false
+success_symbol = ""
+symbol = "✖"
+style = "fg:color_red bold"
+format = "[$symbol $status ]($style)"
+
+# =========================================================
+# BATTERY
+# =========================================================
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+
+[[battery.display]]
+threshold = 100
+style = "fg:color_yellow"
+
+# =========================================================
+# UTIL
+# =========================================================
+
+[cmd_duration]
+min_time = 2000
+style = "fg:color_pink"
+format = "[⏱ $duration]($style)"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "fg:color_aqua"
+format = "[🕒 $time ]($style)"
+
+# =========================================================
+# CHARACTER
+# =========================================================
+
+[character]
+success_symbol = "[➜](fg:color_green bold)"
+error_symbol = "[✗](fg:color_red bold)"
+
+# =========================================================
+# LINE BREAK
+# =========================================================
+
+[line_break]
+disabled = false

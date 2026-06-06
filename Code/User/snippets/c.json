@@ -1,0 +1,58 @@
+{
+	// Place your snippets for c here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	//
+	// You can also restrict snippets to specific files using include/exclude patterns:
+	// "Test snippet": {
+	// 	"prefix": "test",
+	// 	"body": "test('$1', () => {\n\t$0\n});",
+	// 	"include": ["**/*.test.ts", "*.spec.ts"],
+	// 	"exclude": ["**/temp/*.ts"],
+	// 	"description": "Insert test block"
+	// }
+	"C Boilerplate": {
+		"prefix": "cmain",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"",
+			"int main() {",
+			"",
+			"    printf(\"$0\\n\");",
+			"",
+			"    return 0;",
+			"}"
+		],
+		"description": "Basic C boilerplate template"
+	},
+
+	"C Boilerplate Input": {
+		"prefix": "cinput",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"",
+			"int main() {",
+			"    int n;",
+			"    printf(\"Enter $0: \");",
+			"    scanf(\"%d\", &n);",
+			"",
+			"    printf(\"You entered: %d\\n\", n);",
+			"",
+			"    return 0;",
+			"}"
+		],
+		"description": "C boilerplate with input"
+	}
+}

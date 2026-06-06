@@ -1,0 +1,58 @@
+# =========================
+# Mako - Material You Theme
+# =========================
+
+font=JetBrainsMono Nerd Font 10
+
+# --- Main style ---
+background-color=#12140eCC
+text-color=#e2e3d8
+
+border-size=2
+border-radius=14
+border-color=#b3d088
+
+padding=12
+margin=16
+
+# ✅ TOP CENTER POSITION
+anchor=top-center
+
+width=360
+
+default-timeout=5000
+max-visible=5
+
+# =========================
+# Urgency Levels
+# =========================
+
+[urgency=low]
+background-color=#44483dCC
+border-color=#414a33
+default-timeout=3000
+
+[urgency=normal]
+background-color=#12140eCC
+border-color=#364e14
+
+[urgency=high]
+background-color=#12140eDD
+border-color=#93000a
+default-timeout=0
+
+[urgency=critical]
+background-color=#93000aDD
+border-color=#ffb4ab
+default-timeout=0
+
+# =========================
+# Modes
+# =========================
+
+[mode=do-not-disturb]
+invisible=1
+on-notify=none
+
+[mode=silent]
+on-notify=none

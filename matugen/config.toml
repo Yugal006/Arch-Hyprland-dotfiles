@@ -1,0 +1,73 @@
+[config]
+#type = "auto"
+
+[config.wallpaper]
+# Whether to set the wallpaper or not
+set = true
+
+# The base command to run for applying the wallpaper.
+# Keywords like {{ image }} or anything that works inside of hooks works here.
+# You could also set a static color if you use the color keywords and the wallpaper setter supports>
+#command = "awww img --transition-type center {{ image }}"
+command = "bash -c 'awww img --transition-type center \"{{ image }}\" && echo \"{{ image }}\" > ~/.config/hypr/current_wallpaper'"
+
+[templates.hyprland]
+input_path = '/home/yloryth/.config/matugen/templates/hyprland-colors.conf'
+output_path = '/home/yloryth/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.kitty]
+input_path = '/home/yloryth/.config/matugen/templates/kitty-colors.conf'
+output_path = '/home/yloryth/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.rofi]
+input_path = '/home/yloryth/.config/matugen/templates/rofi-colors.rasi'
+output_path = '/home/yloryth/.config/rofi/colors.rasi'
+
+[templates.waybar]
+input_path = '/home/yloryth/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.mako]
+input_path = '/home/yloryth/.config/matugen/templates/mako.txt'
+output_path = '~/.config/mako/config'
+post_hook = "pkill mako && mako &"
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/matugen-theme'
+post_hook = 'pkill -USR1 cava'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi-theme.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+[templates.zathura]
+input_path = '~/.config/matugen/templates/zathura-colors.txt'
+output_path = '~/.config/zathura/zathurarc'
+
+[templates.quickshell]
+input_path = '/home/yloryth/.config/matugen/templates/quickshell.json'
+output_path = '~/.local/state/quickshell/generated/colors.json'
+
+[templates.btop]
+input_path = '/home/yloryth/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.gtk3]
+input_path = '/home/yloryth/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/yloryth/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '/home/yloryth/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/yloryth/.config/gtk-4.0/gtk.css'
+
+[templates.tmux]
+input_path = '/home/yloryth/.config/matugen/templates/tmux-colors.conf'
+output_path = '~/.config/tmux/generated.conf'
+post_hook = 'tmux source-file ~/.config/tmux/generated.conf 2>/dev/null || true'
+# ...
+

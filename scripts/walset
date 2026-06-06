@@ -1,0 +1,36 @@
+#!/bin/bash
+
+img="$1"
+WALL="/home/yloryth/.config/hypr/img/$img"
+
+LOCK="/home/yloryth/.config/hypr/current_lock.png"
+
+# -------------------------
+# CHECK FILE EXISTS
+# -------------------------
+if [ ! -f "$WALL" ]; then
+    notify-send -u critical "Wallpaper Error" "File not found: $img"
+    exit 1
+fi
+
+# -------------------------
+# APPLY MATUGEN THEME
+# -------------------------
+matugen image "$WALL" --source-color-index 0
+
+# -------------------------
+# UPDATE HYPRLOCK IMAGE LINK
+# (safe for your existing system)
+# -------------------------
+ln -sf "$WALL" "$LOCK"
+
+# -------------------------
+# NOTIFICATION (SMART FALLBACK)
+# -------------------------
+
+# check if notification daemon supports images
+if notify-send -h 2>/dev/null | grep -q -- "-i"; then
+    notify-send -i "$WALL" -u normal "Wallpaper Changed" "$img"
+else
+    notify-send -u normal "Wallpaper Changed" "$img"
+fi

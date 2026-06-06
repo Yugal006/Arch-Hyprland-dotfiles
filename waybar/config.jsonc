@@ -1,0 +1,141 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+        "clock",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio#mic",
+        "custom/mpris",
+        "custom/cava",
+        "pulseaudio",
+        "custom/power-battery"
+    ],
+    /* ================= CLOCK ================= */
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": " {:%a, %d %b %H:%M}",
+        "tooltip": false
+    },
+    /* ================= WORKSPACES ================= */
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "",
+            "2": "󰮯",
+            "3": "󰨞",
+            "4": "󰊠",
+            "5": "",
+            "urgent": "󰧵",
+            "default": "󰇥"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+    /* ================= WINDOW ================= */
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true,
+        "tooltip": false
+    },
+    /* ================= NETWORK ================= */
+    "network": {
+        "format-wifi": "{icon} {essid}",
+        "format-ethernet": "󰈀 Ethernet",
+        "format-disconnected": "󰤣 Offline",
+        "format-disabled": "󰤮 Off",
+        "tooltip": false,
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "max-length": 15,
+        "on-click": "nm-connection-editor"
+    },
+    /* ================= MIC ================= */
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "   ",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    /* ================= SPEAKER ================= */
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " 󰖁 ",
+        "format-icons": {
+            "headphone": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pavucontrol",
+        "tooltip-format": "Volume: {volume}%"
+    },
+    /* ================= BATTERY ================= */
+    // "battery": {
+    //     "bat": "BAT0",
+    //     "adapter": "AC",
+    //     "format": "{icon} {capacity}%",
+    //     "format-charging": "󰂄 {capacity}%",
+    //     "format-plugged": "󰂄 {capacity}%",
+    //     "format-full": "󰁹 100%",
+    //     "tooltip": false,
+    //     "format-icons": [
+    //         "󰁺",
+    //         "󰁻",
+    //         "󰁼",
+    //         "󰁽",
+    //         "󰁾",
+    //         "󰁿",
+    //         "󰂀",
+    //         "󰂁",
+    //         "󰂂",
+    //         "󰁹"
+    //     ]
+    // },
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh"
+    },
+    "custom/mpris": {
+        "format": "{}",
+        "exec": "~/.config/waybar/mpris.sh",
+        "interval": 1,
+        "on-click": "playerctl play-pause"
+    },
+    // "power-profiles-daemon": {
+    //     "format": "{icon}",
+    //     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    //     "tooltip": true,
+    //     "format-icons": {
+    //         "default": "",
+    //         "performance": "",
+    //         "balanced": "",
+    //         "power-saver": ""
+    //     }
+    // },
+    "custom/power-battery": {
+        "exec": "~/.config/waybar/power-battery.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "~/.config/waybar/power-battery.sh toggle",
+        "tooltip": true
+    }
+}

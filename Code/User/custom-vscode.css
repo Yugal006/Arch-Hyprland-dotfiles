@@ -1,0 +1,168 @@
+/* =========================
+   Fonts & Editor
+========================= */
+
+/* Comments */
+.mtk4 {
+    font-family: "Monaspace Radon", monospace !important;
+    font-style: italic !important;
+    color: #ff00b7 !important;
+}
+
+/* Editor top shadow */
+.monaco-editor .scroll-decoration {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45) !important;
+    top: -6px !important;
+}
+
+/* Current search match */
+.currentFindMatchInline {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-radius: 4px !important;
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.part.sidebar {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.25) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Sidebar title */
+.composite.title h2 {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: #c792ea !important;
+}
+
+/* Explorer font */
+.monaco-tree .label-name,
+.monaco-icon-label .label-name {
+    font-family: "Geist Mono", monospace !important;
+    font-size: 13px !important;
+    color: #e6edf3 !important;
+}
+
+/* Selected explorer item */
+.monaco-list-row.selected {
+    background: rgba(199, 146, 234, 0.15) !important;
+    border-radius: 8px !important;
+}
+
+/* Hover item */
+.monaco-list-row:hover {
+    background: rgba(255, 255, 255, 0.166) !important;
+    border-radius: 8px !important;
+}
+
+/* =========================
+   Scrollbar
+========================= */
+
+.slider {
+    width: 3px !important;
+    border-radius: 10px !important;
+    background: #c792ea !important;
+}
+
+/* =========================
+   Command Palette
+========================= */
+
+.quick-input-widget {
+    backdrop-filter: blur(20px) !important;
+    border-radius: 18px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45) !important;
+    overflow: hidden !important;
+}
+
+/* Command input */
+.quick-input-filter .monaco-inputbox {
+    border-radius: 12px !important;
+    padding: 14px !important;
+    border: none !important;
+    font-family: "Geist Mono" !important;
+    font-size: 15px !important;
+    margin-bottom: 12px !important;
+}
+
+/* Placeholder */
+.monaco-inputbox input::placeholder {
+    color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Palette list background */
+.monaco-list-rows {
+    background: transparent !important;
+}
+
+/* =========================
+   Tooltip
+========================= */
+
+.monaco-editor-hover,
+.monaco-hover {
+    backdrop-filter: blur(20px) !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* =========================
+   Search
+========================= */
+
+.search-label {
+    font-family: "Geist Mono" !important;
+    font-size: 13px !important;
+}
+
+/* Hide search icons */
+.search-icon,
+.codicon-search::before {
+    display: none !important;
+}
+
+/* =========================
+   Activity Bar
+========================= */
+
+.activitybar {
+    border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* =========================
+   Tabs
+========================= */
+
+.tab {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* =========================
+   Terminal
+========================= */
+
+.terminal-wrapper {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* =========================
+   Smooth UI
+========================= */
+
+* {
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        opacity 0.15s ease !important;
+}

@@ -1,0 +1,128 @@
+## =========================================================
+## CAVA — CYBER HUD CORE
+## Theme-driven architecture
+##
+## Themes location:
+## ~/.config/cava/themes/
+##
+## Change theme instantly:
+## theme = "cyberdream"
+## theme = "matugen-theme"
+## theme = "tokyonight"
+## theme = "neonwave"
+## =========================================================
+
+
+[general]
+
+## Smooth high refresh animation
+framerate = 144
+
+## Dynamic width
+bars = 0
+
+## Clean futuristic density
+bar_width = 3
+bar_spacing = 1
+
+## Center alignment
+center_align = 1
+
+## Dynamic sensitivity
+autosens = 1
+sensitivity = 120
+
+## Audio range
+lower_cutoff_freq = 35
+higher_cutoff_freq = 16000
+
+## Never sleep
+sleep_timer = 0
+
+## Use full terminal height
+max_height = 100
+
+
+
+[input]
+
+method = pipewire
+source = auto
+
+sample_rate = 48000
+sample_bits = 16
+channels = 2
+
+
+
+[output]
+
+## Terminal renderer
+method = noncurses
+
+## Best looking orientation
+orientation = horizontal
+
+## Mirror stereo
+channels = stereo
+
+## Reduces flicker
+synchronized_sync = 1
+
+## Nice idle effect
+show_idle_bar_heads = 1
+
+## Continuous smooth rendering
+continuous_rendering = 1
+
+## Cleaner output
+xaxis = none
+
+
+
+[color]
+
+## IMPORTANT:
+## Transparent background for Kitty blur
+background = default
+
+## ============================
+## THEME LOADER
+## ============================
+
+theme = "neonwave"
+
+
+
+[smoothing]
+
+## Fluid motion
+monstercat = 1
+
+## Wave effect
+waves = 1
+
+## Smoothness
+noise_reduction = 88
+
+## Audio-reactive motion
+waveform = 1
+
+
+
+[eq]
+
+## Enhanced bass
+1 = 1.45
+
+## Mid bass
+2 = 1.25
+
+## Midrange
+3 = 1.00
+
+## Vocals
+4 = 0.92
+
+## Treble
+5 = 0.82
