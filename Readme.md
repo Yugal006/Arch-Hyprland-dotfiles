@@ -4,24 +4,25 @@ A modern Arch Linux + Hyprland setup built around dynamic wallpaper-based themin
 
 Every wallpaper automatically generates a complete color palette and synchronizes the entire desktop environment including:
 
-* Hyprland
-* Waybar
-* Kitty
-* Fish
-* Starship
-* Neovim
-* Tmux
-* Mako
-* GTK 3 / GTK 4
-* Yazi
-* Cava
-* Quickshell
+- Hyprland
+- Waybar
+- Kitty
+- Fish
+- Starship
+- Neovim
+- Tmux
+- Mako
+- GTK 3 / GTK 4
+- Yazi
+- Cava
+- Quickshell
 
 ---
 
 ![Desktop Preview](assets/IDLE.png)
 
 ---
+
 ## ✨ Features
 
 ### 🎨 Dynamic Theming
@@ -30,24 +31,24 @@ Powered by Matugen.
 
 Change a wallpaper and the entire desktop updates automatically:
 
-* Window manager colors
-* Terminal colors
-* Waybar styling
-* GTK applications
-* Notifications
-* Editor themes
-* File manager colors
-* Shell prompt colors
+- Window manager colors
+- Terminal colors
+- Waybar styling
+- GTK applications
+- Notifications
+- Editor themes
+- File manager colors
+- Shell prompt colors
 
 ---
 
 ### 🖥️ Hyprland
 
-* Multi-monitor support
-* Custom workspaces
-* Hyprlock integration
-* Hypridle power management
-* Dynamic wallpaper switching
+- Multi-monitor support
+- Custom workspaces
+- Hyprlock integration
+- Hypridle power management
+- Dynamic wallpaper switching
 
 ---
 
@@ -55,21 +56,21 @@ Change a wallpaper and the entire desktop updates automatically:
 
 Custom modules including:
 
-* Cava audio visualizer
-* MPRIS media controls
-* Battery information
-* Power menu
-* Dynamic Matugen colors
+- Cava audio visualizer
+- MPRIS media controls
+- Battery information
+- Power menu
+- Dynamic Matugen colors
 
 ---
 
 ### 🐟 Terminal Workflow
 
-* Kitty
-* Fish shell
-* Starship prompt
-* Tmux
-* Fastfetch
+- Kitty
+- Fish shell
+- Starship prompt
+- Tmux
+- Fastfetch
 
 Built for development and terminal-first workflows.
 
@@ -79,21 +80,21 @@ Built for development and terminal-first workflows.
 
 Neovim configuration includes:
 
-* LSP support
-* Treesitter
-* Telescope
-* Neo-tree
-* Autocompletion
-* Git integration
-* Dashboard
+- LSP support
+- Treesitter
+- Telescope
+- Neo-tree
+- Autocompletion
+- Git integration
+- Dashboard
 
 ---
 
 ### 📂 File Management
 
-* Yazi
-* Dynamic Matugen colors
-* Preview support
+- Yazi
+- Dynamic Matugen colors
+- Preview support
 
 ---
 
@@ -117,7 +118,11 @@ Neovim configuration includes:
 
 ---
 
-## 🎥 Showcase
+## Preview
+
+![Preview](assets/preview.gif)
+
+## 🎥 Full Showcase
 
 See the complete setup in action:
 
@@ -201,7 +206,9 @@ slurp
 ```
 
 ---
+
 git
+
 ## 🚀 Installation
 
 Clone the repository:
@@ -229,9 +236,9 @@ Install the required packages and restart Hyprland.
 
 This setup is designed for:
 
-* Arch Linux
-* Hyprland
-* Wayland
+- Arch Linux
+- Hyprland
+- Wayland
 
 Other distributions may require package name adjustments.
 
