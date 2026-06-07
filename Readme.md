@@ -21,7 +21,11 @@ Every wallpaper automatically generates a complete color palette and synchronize
 <!-- 📸 SCREENSHOTS SECTION -->
 <div align="center">
 
-## 📸 Screenshots
+<h3 align="center">
+	<img src="assets/emojis/Sparkles.webp" alt="Sparkles" width="38" height="38" />
+	Hyprland-Dotfiles Showcase 
+	<img src="assets/emojis/Sparkles.webp" alt="Sparkles" width="38" height="38" />
+</h3>
 
 <br/>
 
@@ -61,7 +65,7 @@ Every wallpaper automatically generates a complete color palette and synchronize
 <img src="assets/preview.gif" width="850"/>
 
 <br/>
-<b>✨ Full Animated Preview</b>
+<b>✨ Animated Preview</b>
 
 </div>
 
