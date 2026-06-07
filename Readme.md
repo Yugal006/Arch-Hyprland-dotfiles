@@ -18,30 +18,52 @@ Every wallpaper automatically generates a complete color palette and synchronize
 - Quickshell
 
 ---
+<!-- 📸 SCREENSHOTS SECTION -->
+<div align="center">
 
 ## 📸 Screenshots
 
-### Idle Desktop
+<br/>
 
-![Idle](assets/IDLE.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/IDLE.png" width="420"/><br/>
+      <b>Idle Desktop</b>
+    </td>
+    <td align="center">
+      <img src="assets/GTK+VSCode.png" width="420"/><br/>
+      <b>GTK + VSCode</b>
+    </td>
+  </tr>
 
-### GTK + VSCode
+  <tr>
+    <td align="center">
+      <img src="assets/NVim+TMUX.png" width="420"/><br/>
+      <b>Neovim + Tmux</b>
+    </td>
+    <td align="center">
+      <img src="assets/Yazi.png" width="420"/><br/>
+      <b>Yazi File Manager</b>
+    </td>
+  </tr>
 
-![GTK VSCode](assets/GTK+VSCode.png)
+  <tr>
+    <td colspan="2" align="center">
+      <img src="assets/hyprCheatsheet.png" width="850"/><br/>
+      <b>Hyprland Cheat Sheet Overlay</b>
+    </td>
+  </tr>
+</table>
 
-### Neovim + Tmux
+<br/>
 
-![Neovim](assets/NVim+TMUX.png)
+<img src="assets/preview.gif" width="850"/>
 
-### Yazi
+<br/>
+<b>✨ Full Animated Preview</b>
 
-![Yazi](assets/Yazi.png)
-
----
-
-## Preview
-
-![Preview](assets/preview.gif)
+</div>
 
 ## 🎥 Full Showcase
 
